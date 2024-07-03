@@ -1,0 +1,138 @@
+@import url(/styles/navbar.css);
+@import url(/styles/footer.css);
+
+/*----------------------------------------NOSOTROS-------------------------------------------------------*/
+
+.nosotros__container {
+  position: relative;
+  box-sizing: border-box;
+  width: 99.3vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7vh;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f5f7f8 100%);
+  padding-bottom: 3rem;
+
+  & h3 {
+    font-family: Inter;
+    font-size: clamp(1.4rem, 0.436rem + 2.571vw, 2.75rem);
+    font-weight: bold;
+    line-height: 42.12px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+
+  & figure {
+    box-sizing: border-box;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 0 0 18px 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & .nosotros__text {
+    width: 50%;
+    font-family: Inter;
+    font-size: clamp(1.1rem, -0.25rem + 3.333vw, 1.35rem);
+    font-weight: 350;
+    line-height: 32px;
+    letter-spacing: 0px;
+    color: #000000;
+    padding: 2rem 7rem 2rem 7rem;
+
+    overflow: hidden;
+    margin: 0 auto;
+
+    & p > span {
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+
+    & .salud {
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 37.44px;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-bottom: 1rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.nosotros__container::before{
+  content: url(/imagenes/Cafe/granoscafe.png);
+  object-fit: contain;
+  position: absolute;
+  top: 36%;
+  left: -18vw;
+  height: 110%;
+  opacity: 0.95;
+  
+  overflow: hidden;
+}
+
+.text__animation{
+  transform: translateX(200%);
+  transition: transform 1.3s ease;
+}
+
+.text__animation:nth-of-type(even){
+  transform: translateX(-200%);
+}
+
+.text__animation.show{
+  transform: translateX(0);
+}
+
+
+/*----------------------RESPONSIVE-------------------*/
+
+@media (578px < width < 1000px) {
+  .nosotros__container::before{
+    content: url(/imagenes/Cafe/granoscafe.png);
+    object-fit: contain;
+    position: absolute;
+    top: 42%;
+    left: -30vw;
+    height: 110%;
+  }
+}
+
+@media (1px < width < 578px) {
+  .nosotros__container::before{
+    content: '';
+  }
+
+  .nosotros__container {
+    width: 100vw;
+    margin-top: 5vh;
+  
+    & h3 {
+      padding: 2rem 2rem 0 2rem;
+      margin: 0 auto;
+    }
+  
+    & figure {
+      width: 100%;
+      height: 80vh;
+    }
+
+    & .nosotros__text {
+      box-sizing: border-box;
+      width: 90%;
+      padding: 3rem 2rem 2rem 3rem;
+    }
+  }  
+}

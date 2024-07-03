@@ -1,0 +1,864 @@
+@import url(/styles/navbar.css);
+@import url(/styles/footer.css);
+
+/*----------------------------------------LANDING-------------------------------------------------------*/
+
+.layout__container {
+  box-sizing: border-box;
+  width: 99.3vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/imagenes/Cafe/fondoblanco.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 0 0 18px 18px;
+
+  & img {
+    display: flex;
+    width: 56%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 4rem;
+    align-items: center;
+    opacity: 0;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  }
+
+  & h1 {
+    margin-top: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, -1.077rem + 12.308vw, 6.5rem);
+    text-align: center;
+    color: #7d5629;
+    opacity: 0;
+    text-shadow: 14px 14px 14px 22px rgba(0, 0, 0, 0.952);
+    animation: titulo 2s ease 0s 1 normal forwards;
+    filter: contrast(10%);
+  }
+
+  .title__texts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.5rem;
+
+    & h2 {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(2rem, -1.077rem + 12.308vw, 6.5rem);
+      text-shadow: 4px 4px 4px 20px rgba(255, 255, 255, 0.918);
+      font-weight: 180;
+      color: black;
+      opacity: 0;
+      text-shadow: 2px 2px 4px 5px rgba(0, 0, 0, 0.952);
+      animation: titulodos 2s ease 0s 1 normal forwards;
+    }
+
+    & h4 {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(0.5rem, -0.105rem + 2.155vw, 1.8rem);
+      font-weight: 260;
+      line-height: 1.7rem;
+      color: black;
+      opacity: 0;
+      text-shadow: 2px 2px 4px 5px rgba(0, 0, 0, 0.952);
+      animation: lema 2s ease 0.6s 1 normal forwards;
+    }
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    transform: translateY(-300px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    filter: contrast(160%);
+    filter: contrast(100%);
+  }
+}
+
+@keyframes titulo {
+  0% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+    filter: contrast(200%);
+    filter: contrast(100%);
+  }
+}
+
+@keyframes titulodos {
+  0% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+    filter: contrast(2000%);
+  }
+}
+
+@keyframes lema {
+  0% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    filter: contrast(200%);
+  }
+}
+
+/*--------------------description--------------------------------------*/
+
+.main__container {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #f5f7f8 100%);
+  box-sizing: border-box;
+  height: auto;
+  width: 99.3vw;
+  padding: 0 8rem;
+  overflow: hidden;
+}
+
+.description {
+  box-sizing: border-box;
+  margin: 4rem 0 0 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  & div {
+    box-sizing: border-box;
+    width: 17%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 1rem;
+
+    & img {
+      width: 25%;
+      object-fit: cover;
+    }
+
+    & h5 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1rem;
+    }
+
+    & p {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.3rem;
+    }
+  }
+}
+
+/*---------------------CAFES-------------------------------------------*/
+
+.productos {
+  border-radius: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 89vh;
+  margin: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #202020;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 18px;
+    position: relative;
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    top: 88%;
+    left: 35%;
+    background-color: #202020;
+  }
+
+  & .cafes {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    & figure {
+      width: 4%;
+      height: 6rem;
+      cursor: pointer;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      & img:hover {
+        scale: 1.5;
+      }
+    }
+
+    & .carousel {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(100% / 4);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      border-radius: 8px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+
+      & article {
+        width: 75%;
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 300px;
+        object-fit: cover;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        position: relative;
+        border-radius: 18px;
+        margin: 1rem 0 2rem 0;
+        filter: contrast(96%);
+        background-color: #caaa66;
+        cursor: pointer;
+
+        & h3 {
+          font-family: "Josefin Sans", sans-serif;
+          font-size: 1, 4rem;
+          position: absolute;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: rgb(27, 27, 27);
+        }
+
+        & img {
+          height: 80%;
+          width: 100%;
+          position: absolute;
+          top: 54%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          object-fit: cover;
+        }
+      }
+
+      & article:hover {
+        filter: brightness(110%);
+        filter: contrast(110%);
+        scale: 1.1;
+
+        & h3 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  & a {
+    padding: 1.3rem 3.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+    background-color: #202020;
+    box-shadow: rgba(124, 100, 23, 0.1) 0px 4px 12px;
+    border-radius: 18px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}
+
+/*-----------------------NOSOTROS----------------------------------*/
+
+.about {
+  box-sizing: border-box;
+  margin: 8rem 0 3rem 0;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 18px;
+
+  & figure {
+    width: 50%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 18px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      filter: contrast(96%);
+    }
+  }
+
+  & div {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    & p {
+      width: 100%;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: clamp(1rem, 0.277rem + 1.692vw, 1.4rem);
+      font-weight: 360;
+    }
+
+    & a {
+      width: 16%;
+      margin-top: 3rem;
+      padding: 1.4rem 2.8rem;
+      font-family: "Josefin Sans", sans-serif;
+      color: white;
+      background-color: #202020;
+      box-shadow: rgba(124, 100, 23, 0.1) 0px 4px 12px;
+      border-radius: 18px;
+      margin-left: 0rem;
+      font-size: 1.3rem;
+      text-decoration: none;
+      
+    }
+  }
+}
+
+/*------------------------SUSCRIBE---------------------------------*/
+
+.suscribe__container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  margin: 8rem 0 9rem 0;
+  border-radius: 18px;
+
+  & figure {
+    width: 40%;
+    height: 115%;
+    order: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 18px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      filter: contrast(96%);
+    }
+  }
+
+  & div {
+    width: 60%;
+    height: 100%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
+    & h4 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    & p {
+      margin-top: -2rem;
+      width: 80%;
+      height: auto;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: clamp(1rem, 0.277rem + 1.692vw, 1.4rem);
+      font-weight: 360;
+      line-height: 1.8rem;
+    }
+
+    & input {
+      background-color: #85714e;
+      filter: contrast(96%);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 1rem 2rem;
+      border-radius: 18px;
+      margin-top: -7rem;
+      color: white;
+    }
+
+    & input::placeholder {
+      color: white;
+    }
+  }
+}
+
+/*-----------------Responsive------------------*/
+
+@media (578px < width < 1100px) {
+  .layout__container {
+    background-image: url(/imagenes/Cafe/fondoblancomobile.jpg);
+
+    & img {
+      width: 56%;
+    }
+
+    & h1 {
+      font-size: clamp(3rem, -0.59rem + 9.938vw, 4.7rem);
+    }
+
+    .title__texts {
+      margin-top: -1rem;
+      & h2 {
+        font-size: clamp(3rem, -0.59rem + 9.938vw, 5.3rem);
+      }
+
+      & h4 {
+        font-size: 0.9rem;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  .main__container {
+    height: auto;
+    width: 99.3vw;
+    padding: 0 6rem;
+  }
+
+  .description {
+    height: auto;
+    min-height: 250px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    & div {
+      width: auto;
+      justify-content: flex-end;
+      justify-items: first baseline;
+      align-items: center;
+      gap: 1.3rem;
+    }
+  }
+
+  .productos {
+    width: 100%;
+    height: auto;
+    min-height: 550px;
+
+    h2::before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 2px;
+      top: 88%;
+      left: 30%;
+      background-color: #202020;
+    }
+
+    & .cafes {
+      gap: 10px;
+
+      & .carousel {
+        grid-auto-columns: calc(100% / 3);
+
+        & article {
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .about {
+    margin: 9rem 0 3rem 0;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 18px;
+
+    & figure {
+      width: 100%;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 28px 150px 0px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & div {
+      margin-top: 1rem;
+      width: 100%;
+      gap: 3rem;
+
+      & p {
+        padding-top: 2rem;
+      }
+
+      & a {
+        margin: 0 auto
+      }
+    }
+  }
+
+  .suscribe__container {
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 9rem 0 7rem 0;
+
+    & figure {
+      width: 100%;
+      height: 50%;
+      order: 2;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      order: 1;
+    }
+
+    & div {
+      box-sizing: border-box;
+      width: 100%;
+      height: 50%;
+      order: 2;
+      padding: 3rem;
+      gap: 1rem;
+
+      & h4 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
+      & p {
+        margin-top: 0;
+      }
+
+      & input {
+        margin-top: 0;
+      }
+
+      & input::placeholder {
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 578px) {
+  .layout__container {
+    background-image: url(/imagenes/Cafe/fondoblancomobile.jpg);
+
+    & img {
+      width: 50%;
+    }
+
+    & h1 {
+      font-size: 3rem;
+    }
+
+    .title__texts {
+      margin-top: -0.5rem;
+
+      & h2 {
+        font-size: 3rem;
+        font-weight: 180;
+      }
+
+      & h4 {
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 0.9rem;
+      }
+    }
+  }
+
+  .main__container {
+    padding: 0 1rem;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .description {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    align-items: start;
+
+    & div {
+      left: 0;
+      box-sizing: border-box;
+      width: 80%;
+      height: 100%;
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+
+      & img {
+        width: 20%;
+        object-fit: cover;
+      }
+
+      & h5 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1rem 0;
+      }
+
+      & p {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.3rem;
+        padding: 1rem 3rem;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      background: rgb(201, 199, 199);
+      border-radius: 0 0 15px 15px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #868585;
+      border-radius: 15px;
+    }
+  }
+
+  .productos {
+    border-radius: 18px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 7rem 1rem 3rem 0.2rem;
+
+    h2::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 2px;
+      left: 15%;
+    }
+
+    & .cafes {
+      & figure {
+        width: 8%;
+        height: 6rem;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        & img {
+          width: 110%;
+          height: 110%;
+          object-fit: contain;
+        }
+      }
+
+      & .carousel {
+        width: 70%;
+        grid-auto-columns: calc(100% / 1);
+        gap: 1.3rem;
+
+        & article {
+          width: 100%;
+          height: 320px;
+          padding: 2rem;
+          align-items: center;
+          margin: 1rem 0 0rem 0;
+          cursor: pointer;
+
+          & img {
+            height: 80%;
+            width: 100%;
+          }
+        }
+
+        & article:hover {
+          scale: 1;
+
+          & h3 {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
+    & a {
+      padding: 1.2rem 3.5rem;
+      color: white;
+      border-radius: 18px;
+      font-size: 1.3rem;
+    }
+  }
+
+  .about {
+    box-sizing: border-box;
+    margin: 4rem 0 3rem 0;
+    width: 100%;
+    height: 68vh;
+    min-height: 600px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15rem;
+
+    border-radius: 18px;
+
+    & figure {
+      width: 99.8%;
+      border-radius: 18px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & div {
+      width: 100%;
+      height: auto;
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: column;
+
+      & p {
+        width: 80%;
+        height: auto;
+        font-weight: 350;
+        margin: 0 auto;
+      }
+
+      & a {
+        width: 20%;
+        padding: 1.4rem 2.5rem;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .suscribe__container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 65vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 0 0 0;
+    border-radius: 18px;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+
+    & figure {
+      margin-left: -0.1rem;
+      width: 100%;
+      height: 40%;
+      order: 1;
+      border-radius: 18px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+      }
+    }
+
+    & div {
+      width: 100%;
+      height: 60%;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+
+      & h4 {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+      }
+
+      & p {
+        margin-top: -1rem;
+        width: 80%;
+        height: auto;
+        line-height: 1.4rem;
+      }
+
+      & input {
+        padding: 1rem 2rem;
+        border-radius: 18px;
+        margin-top: -3rem;
+      }
+
+      & input::placeholder {
+        color: white;
+      }
+    }
+  }
+}
